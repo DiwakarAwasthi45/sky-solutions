@@ -7,12 +7,12 @@ import {
   Mail,
   User,
   MapPin,
-  GraduationCap,
   BookOpen,
   Calendar,
   Users,
   MessageSquare,
 } from "lucide-react";
+import { useEffect } from "react";
 
 const courses = [
   "Basic Computer",
@@ -28,7 +28,8 @@ const courses = [
   "Accounting Package (Tally)",
 ];
 
-const page = () => {
+ function page () {
+
   return (
     <section className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-sky-100 py-20">
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-14 items-start">

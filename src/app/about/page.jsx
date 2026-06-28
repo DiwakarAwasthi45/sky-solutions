@@ -9,6 +9,8 @@ import {
   Laptop,
   GraduationCap,
   ArrowRight,
+  Target,
+  Eye,
 } from 'lucide-react'
 
 export default function page() {
@@ -95,20 +97,6 @@ export default function page() {
       })
     }, sectionRef)
 
-    return () => ctx.revert()
-     const counter = { value: 0 }
-
-    gsap.to(counter, {
-      value: 3000,
-      duration: 2,
-      ease: 'power2.out',
-      snap: { value: 1 },
-      onUpdate: () => {
-        if (countRef.current) {
-          countRef.current.textContent = `${counter.value}+`
-        }
-      },
-    })
   }, [])
 
   return (
@@ -212,6 +200,126 @@ export default function page() {
           </div>
 
         </div>
+
+        {/* ================= Mission & Vision ================= */}
+
+<div className="mt-28 ">
+
+  <div className="text-center mb-14 ">
+
+    <span className="inline-block rounded-full bg-white/15 px-5 py-2 text-sm font-semibold text-white backdrop-blur">
+      Our Purpose
+    </span>
+
+    <h2 className="mt-5  text-4xl md:text-5xl font-black text-white">
+      Mission & Vision
+    </h2>
+
+    <p className="mt-5  max-w-3xl mx-auto text-blue-100 text-lg leading-8">
+      We are committed to delivering high-quality computer education that
+      prepares students for today's competitive digital world.
+    </p>
+
+  </div>
+
+  <div className="grid lg:grid-cols-2 gap-8">
+
+    {/* Mission */}
+
+    <div className="mission-card group rounded-3xl bg-white p-10 shadow-2xl transition hover:-translate-y-3">
+
+      <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-[#1877AE]/10 mb-8">
+
+        <Target
+          size={42}
+          className="text-[#1877AE]"
+        />
+
+      </div>
+
+      <h3 className="text-3xl font-black text-gray-900">
+        Our Mission
+      </h3>
+
+      <p className="mt-6 text-gray-600 leading-8 text-lg">
+        Our mission is to provide affordable, practical, and
+        industry-oriented computer education that empowers students with
+        technical knowledge, professional confidence, and career-ready
+        skills. We strive to bridge the gap between education and
+        employment through hands-on learning and expert guidance.
+      </p>
+
+      <ul className="mt-8 space-y-4">
+
+        {[
+          "Industry-focused practical training",
+          "Experienced and dedicated instructors",
+          "Modern computer laboratories",
+          "Career counseling and job guidance",
+        ].map((item) => (
+          <li
+            key={item}
+            className="flex items-center gap-3"
+          >
+            <div className="h-2.5 w-2.5 rounded-full bg-[#1877AE]"></div>
+
+            <span className="text-gray-700">{item}</span>
+          </li>
+        ))}
+
+      </ul>
+
+    </div>
+
+    {/* Vision */}
+
+    <div className="vision-card group rounded-3xl bg-white p-10 shadow-2xl transition hover:-translate-y-3">
+
+      <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-yellow-400/20 mb-8">
+
+        <Eye
+          size={42}
+          className="text-yellow-500"
+        />
+
+      </div>
+
+      <h3 className="text-3xl font-black text-gray-900">
+        Our Vision
+      </h3>
+
+      <p className="mt-6 text-gray-600 leading-8 text-lg">
+        Our vision is to become one of Nepal's leading computer training
+        institutes by inspiring innovation, nurturing future technology
+        professionals, and producing skilled graduates who contribute to
+        the growth of the digital economy.
+      </p>
+
+      <ul className="mt-8 space-y-4">
+
+        {[
+          "Become a trusted IT education center",
+          "Develop globally competitive professionals",
+          "Promote innovation and entrepreneurship",
+          "Support lifelong learning and digital transformation",
+        ].map((item) => (
+          <li
+            key={item}
+            className="flex items-center gap-3"
+          >
+            <div className="h-2.5 w-2.5 rounded-full bg-yellow-500"></div>
+
+            <span className="text-gray-700">{item}</span>
+          </li>
+        ))}
+
+      </ul>
+
+    </div>
+
+  </div>
+
+</div>
 
       </div>
     </section>

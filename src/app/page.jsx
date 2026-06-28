@@ -5,8 +5,124 @@ import { ArrowRight,  Star,
  } from "lucide-react";
 import Image from "next/image";
 import {  facilities, GALLERY, SERVICES, testimonials } from "./Data";
+import { useEffect } from "react";
+import gsap from "gsap";
 
  function page() {
+  useEffect(() => {
+  const tl = gsap.timeline({
+    defaults: {
+      ease: "power3.out",
+    },
+  });
+
+  tl.from(".hero-badge", {
+    opacity: 0,
+    y: -30,
+    duration: 0.7,
+  })
+
+    .from(
+      ".hero-title",
+      {
+        opacity: 0,
+        y: 70,
+        duration: 1,
+      },
+      "-=0.3"
+    )
+
+    .from(
+      ".hero-desc",
+      {
+        opacity: 0,
+        y: 40,
+        duration: 0.8,
+      },
+      "-=0.5"
+    )
+
+    .from(
+      ".hero-buttons a",
+      {
+        opacity: 1,
+        y: 30,
+        stagger: 0.2,
+        duration: 0.6,
+      },
+      "-=0.4"
+    )
+
+    .from(
+      ".stat-card",
+      {
+        opacity: 1,
+        scale: 0.8,
+        y: 20,
+        stagger: 0.15,
+        duration: 0.5,
+      },
+      "-=0.3"
+    )
+
+    .from(
+      ".hero-image",
+      {
+        opacity: 0,
+        x: 100,
+        duration: 1,
+      },
+      "-=1"
+    )
+
+    .from(
+      ".floating-card",
+      {
+        opacity: 0,
+        y: 40,
+        scale: 0.8,
+        duration: 0.6,
+      },
+      "-=0.5"
+    );
+
+  // Floating glow animation
+  gsap.to(".glow-left", {
+    x: 40,
+    y: -30,
+    repeat: -1,
+    yoyo: true,
+    duration: 6,
+    ease: "sine.inOut",
+  });
+
+  gsap.to(".glow-right", {
+    x: -40,
+    y: 30,
+    repeat: -1,
+    yoyo: true,
+    duration: 8,
+    ease: "sine.inOut",
+  });
+
+  // Floating card animation
+  gsap.to(".floating-card", {
+    y: -12,
+    repeat: -1,
+    yoyo: true,
+    duration: 2,
+    ease: "power1.inOut",
+  });
+
+  // Image zoom animation
+  gsap.to(".hero-image img", {
+    scale: 1.05,
+    duration: 6,
+    repeat: -1,
+    yoyo: true,
+    ease: "none",
+  });
+}, []);
 
   return (
     <>
@@ -28,8 +144,8 @@ import {  facilities, GALLERY, SERVICES, testimonials } from "./Data";
       <div className="absolute inset-0 bg-black/60"></div>
 
       {/* ✨ GLOW EFFECTS */}
-      <div className="absolute -left-20 top-0 h-72 w-72 rounded-full bg-white/10 blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-300/20 blur-3xl"></div>
+      <div className="absolute -left-20  glow-left top-0 h-72 w-72 rounded-full bg-white/10 blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 glow-right h-96 w-96 rounded-full bg-cyan-300/20 blur-3xl"></div>
 
       {/* CONTENT */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 h-full flex items-center">
@@ -40,12 +156,12 @@ import {  facilities, GALLERY, SERVICES, testimonials } from "./Data";
           <div>
 
             {/* BADGE */}
-            <span className="inline-block rounded-full bg-white/10 px-5 py-2 text-sm font-semibold text-white backdrop-blur">
-              🚀 Welcome to Sky Solutions Institute
+            <span className=" hero-badge inline-block rounded-full bg-white/10 px-5 py-2 text-sm font-semibold text-white backdrop-blur">
+               Welcome to Sky Solutions Institute
             </span>
 
             {/* TITLE */}
-            <h1 className="mt-6 text-4xl md:text-6xl font-black text-white leading-tight">
+            <h1 className=" hero-title mt-6 text-4xl md:text-6xl font-black text-white leading-tight">
               Learn IT Skills
               <span className="block text-yellow-300">
                 Build Your Future
@@ -53,7 +169,7 @@ import {  facilities, GALLERY, SERVICES, testimonials } from "./Data";
             </h1>
 
             {/* DESCRIPTION */}
-            <p className="mt-6 text-lg text-gray-200 leading-8 max-w-xl">
+            <p className=" hero-desc mt-6 text-lg text-gray-200 leading-8 max-w-xl">
               Join our professional IT training institute and gain hands-on
               experience in computer courses, web development, design,
               networking, and more.
@@ -61,7 +177,7 @@ import {  facilities, GALLERY, SERVICES, testimonials } from "./Data";
 
 
             {/* BUTTONS */}
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className=" hero-buttons a mt-10 flex flex-wrap gap-4">
 
               <Link
                 href="/courses"
@@ -82,7 +198,7 @@ import {  facilities, GALLERY, SERVICES, testimonials } from "./Data";
 
             
             {/* 📊 STATS */}
-            <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-7">
+            <div className=" stat-card mt-16 grid grid-cols-2 sm:grid-cols-4 gap-7">
 
               <div className="bg-white/10 backdrop-blur rounded-xl p-4 text-center">
                 <h3 className="text-2xl font-black text-white">1000+</h3>
@@ -104,9 +220,9 @@ import {  facilities, GALLERY, SERVICES, testimonials } from "./Data";
           </div>
 
           {/* RIGHT CONTENT */}
-          <div className="relative hidden lg:block">
+          <div className="relative hidden lg:block ">
 
-            <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/20">
+            <div className=" hero-image rounded-3xl overflow-hidden shadow-2xl border border-white/20">
               <img
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1000&q=80"
                 alt="students learning IT"
@@ -115,7 +231,7 @@ import {  facilities, GALLERY, SERVICES, testimonials } from "./Data";
             </div>
 
             {/* FLOATING CARD */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4">
+            <div className=" floating-card absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-4">
               <p className="text-sm font-semibold text-gray-900">
                 🎓 1000+ Students Trained
               </p>
@@ -130,8 +246,6 @@ import {  facilities, GALLERY, SERVICES, testimonials } from "./Data";
 
       </div>
     </section>
-
- 
 
 <section className="py-24 bg-gradient-to-b from-sky-50 via-white to-white">
   <div className="max-w-7xl mx-auto px-6">
