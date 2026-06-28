@@ -24,3 +24,13 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes colorChange {
+  0% { color: #1C8BCA; }
+  50% { color: #410eba; }
+  100% { color: #1C8BCB; }
+}
+
+.color-text {
+  animation: colorChange 2s infinite;
+}
