@@ -137,12 +137,12 @@ const courses = [
 
         {/* Name */}
         <div>
-          <label className="text-sm font-medium text-gray-700">
+          <label className="text-sm font-medium text-gray-900">
             Full Name
           </label>
 
           <div className="flex items-center border border-gray-100  rounded-xl px-3 sm:px-4 py-3 mt-2 focus-within:border-[#1C8BCA]">
-            <User className="w-5 h-5 text-gray-400" />
+            <User className="w-5 h-5 text-gray-900" />
             <input
               type="text"
               placeholder="Enter your full name"
@@ -153,12 +153,12 @@ const courses = [
 
         {/* Email */}
         <div>
-          <label className="text-sm font-medium text-gray-700">
+          <label className="text-sm font-medium text-gray-900">
             Email Address
           </label>
 
           <div className="flex items-center border border-gray-100  rounded-xl px-3 sm:px-4 py-3 mt-2 focus-within:border-[#1C8BCA]">
-            <Mail className="w-5 h-5 text-gray-400" />
+            <Mail className="w-5 h-5 text-gray-900" />
             <input
               type="email"
               placeholder="Enter your email"
@@ -169,12 +169,12 @@ const courses = [
 
         {/* Phone */}
         <div>
-          <label className="text-sm font-medium text-gray-700">
+          <label className="text-sm font-medium text-gray-900">
             Phone Number
           </label>
 
           <div className="flex items-center border border-gray-100  rounded-xl px-3 sm:px-4 py-3 mt-2 focus-within:border-[#1C8BCA]">
-            <Phone className="w-5 h-5 text-gray-400" />
+            <Phone className="w-5 h-5 text-gray-900" />
             <input
               type="tel"
               placeholder="98XXXXXXXX"
@@ -187,12 +187,12 @@ const courses = [
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
           <div>
-            <label className="text-sm font-medium text-gray-700">
+            <label className="text-sm font-medium text-gray-900">
               Gender
             </label>
 
             <div className="flex items-center border border-gray-100  rounded-xl px-3 sm:px-4 py-3 mt-2">
-              <Users className="w-5 h-5 text-gray-400" />
+              <Users className="w-5 h-5 text-gray-900" />
 
               <select className="ml-3 w-full outline-none bg-transparent text-sm sm:text-base">
                 <option>Select Gender</option>
@@ -204,12 +204,12 @@ const courses = [
           </div>
 
           <div>
-            <label className="text-sm font-medium text-gray-700">
+            <label className="text-sm font-medium text-gray-900">
               Date of Birth
             </label>
 
             <div className="flex items-center border border-gray-100  rounded-xl px-3 sm:px-4 py-3 mt-2">
-              <Calendar className="w-5 h-5 text-gray-400" />
+              <Calendar className="w-5 h-5 text-gray-900" />
               <input
                 type="date"
                 className="ml-3 w-full outline-none text-sm sm:text-base"
@@ -221,12 +221,12 @@ const courses = [
 
         {/* Address */}
         <div>
-          <label className="text-sm font-medium text-gray-700">
+          <label className="text-sm font-medium text-gray-900">
             Address
           </label>
 
           <div className="flex border border-gray-100  rounded-xl px-3 sm:px-4 py-3 mt-2">
-            <MapPin className="w-5 h-5 text-gray-400 mt-1" />
+            <MapPin className="w-5 h-5 text-gray-900 mt-1" />
             <textarea
               rows={3}
               placeholder="Enter your address"
@@ -237,12 +237,12 @@ const courses = [
 
         {/* Course */}
         <div>
-          <label className="text-sm font-medium text-gray-700">
+          <label className="text-sm font-medium text-gray-900">
             Select Course
           </label>
 
           <div className="flex items-center border border-gray-100  rounded-xl px-3 sm:px-4 py-3 mt-2">
-            <BookOpen className="w-5 h-5 text-gray-400" />
+            <BookOpen className="w-5 h-5 text-gray-900" />
 
             <select className="ml-3 w-full outline-none bg-transparent text-sm sm:text-base">
               <option>Select a Course</option>
@@ -255,7 +255,7 @@ const courses = [
 
         {/* Batch */}
         <div>
-          <label className="text-sm font-medium text-gray-700">
+          <label className="text-sm font-medium text-gray-900">
             Preferred Batch
           </label>
 
@@ -269,12 +269,12 @@ const courses = [
 
         {/* Message */}
         <div>
-          <label className="text-sm font-medium text-gray-700">
+          <label className="text-sm font-medium text-gray-900">
             Message / Previous Experience (Optional)
           </label>
 
           <div className="flex border border-gray-100  rounded-xl px-3 sm:px-4 py-3 mt-2">
-            <MessageSquare className="w-5 h-5 text-gray-400 mt-1" />
+            <MessageSquare className="w-5 h-5 text-gray-900 mt-1" />
             <textarea
               rows={4}
               placeholder="Tell us about yourself..."
@@ -291,7 +291,7 @@ const courses = [
             className="mt-1 accent-[#1C8BCA]"
           />
 
-          <p className="text-xs sm:text-sm text-gray-600 leading-6">
+          <p className="text-xs sm:text-sm text-gray-900 leading-6">
             I confirm that the information provided is correct and I agree
             to the institute's terms and conditions.
           </p>
