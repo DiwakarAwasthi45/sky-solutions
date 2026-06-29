@@ -56,8 +56,8 @@ export default function Header() {
           <Image
             src="/sky.jpg"
             alt="Sky Solutions"
-            width={120}
-            height={70}
+            width={200}
+            height={100}
             priority
             className="object-cover"
           />
