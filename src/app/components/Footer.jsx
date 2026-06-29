@@ -4,13 +4,10 @@ import { Phone, Mail, MapPin, MessageCircle, ArrowUpCircle } from 'lucide-react'
 import Link from 'next/link'
 
 const quickLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'Courses', href: '#courses' },
-  { label: 'Services', href: '#services' },
-  { label: 'Training Process', href: '#process' },
-  { label: 'Testimonials', href: '#testimonials' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'Courses', href: '/courses' },
+  { label: 'Services', href: '/services' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 const courseLinks = [
@@ -59,9 +56,9 @@ export default function Footer() {
                 <Mail size={14} className="text-[#1E6FFF] group-hover:scale-110 transition-transform duration-200" />
                 Skysolutions1987@gmail.com
               </a>
-              <div className="flex items-start gap-2.5 text-[#8A9BB5] text-sm">
+              <div className="flex items-start gap-2.5 text-[#8A9BB5] hover:text-white text-sm">
                 <MapPin size={14} className="text-[#EF4444] mt-0.5 flex-shrink-0" />
-                Bedkot Nagarpalika-3, Shamadaji, Kanchanpur
+                Bedkot Nagarpalika-3, Shamadaiji, Kanchanpur
               </div>
             </div>
           </div>
@@ -72,13 +69,13 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {quickLinks.map(l => (
                 <li key={l.label}>
-                  <a
+                  <Link
                     href={l.href}
                     className="flex items-center gap-2 text-[#8A9BB5] hover:text-white text-sm transition-colors duration-200 group"
                   >
                     <span className="w-1 h-1 rounded-full bg-[#1E6FFF] flex-shrink-0 group-hover:bg-[#00C8F8] transition-colors duration-200" />
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -90,13 +87,13 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {courseLinks.map(c => (
                 <li key={c}>
-                  <a
-                    href="#courses"
+                  <Link
+                    href='/courses'
                     className="flex items-center gap-2 text-[#8A9BB5] hover:text-white text-sm transition-colors duration-200 group"
                   >
                     <span className="w-1 h-1 rounded-full bg-[#00C8F8] flex-shrink-0 group-hover:bg-[#1E6FFF] transition-colors duration-200" />
                     {c}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -105,7 +102,7 @@ export default function Footer() {
           {/* Newsletter / Social */}
           <div>
             <h4 className="font-display font-bold text-white uppercase text-sm tracking-widest mb-5">Stay Connected</h4>
-            <p className="text-[#8A9BB5] text-sm leading-relaxed mb-5">
+            <p className="text-[#8A9BB5] text-sm leading-relaxed mb-5 hover:text-white">
               Follow us on Facebook for latest news, batch announcements, and student success stories.
             </p>
 
@@ -137,7 +134,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-[#8A9BB5] text-sm text-center sm:text-left">
-            <span className="text-white/50">© 2025 Sky Solutions Pvt. Ltd.</span>
+            <span className="text-white/50">© {new Date().getFullYear()}  Sky Solutions PVT. LTD.</span>
             <span className="mx-2 text-white/20">·</span>
             All rights reserved.
             <span className="mx-2 text-white/20">·</span>

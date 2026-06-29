@@ -17,7 +17,7 @@ import gsap from "gsap";
   });
 
   tl.from(".hero-badge", {
-    opacity: 0,
+    opacity: 1,
     y: -30,
     duration: 0.7,
   })
@@ -25,7 +25,7 @@ import gsap from "gsap";
     .from(
       ".hero-title",
       {
-        opacity: 0,
+        opacity: 1,
         y: 70,
         duration: 1,
       },
@@ -35,7 +35,7 @@ import gsap from "gsap";
     .from(
       ".hero-desc",
       {
-        opacity: 0,
+        opacity: 1,
         y: 40,
         duration: 0.8,
       },
@@ -68,7 +68,7 @@ import gsap from "gsap";
     .from(
       ".hero-image",
       {
-        opacity: 0,
+        opacity: 1,
         x: 100,
         duration: 1,
       },
@@ -78,7 +78,7 @@ import gsap from "gsap";
     .from(
       ".floating-card",
       {
-        opacity: 0,
+        opacity: 1,
         y: 40,
         scale: 0.8,
         duration: 0.6,
