@@ -146,7 +146,7 @@ const courses = [
             <input
               type="text"
               placeholder="Enter your full name"
-              className="ml-3 w-full outline-none text-sm sm:text-base"
+              className="ml-3 w-full outline-none text-sm sm:text-base placeholder:text-black"
             />
           </div>
         </div>
@@ -162,7 +162,7 @@ const courses = [
             <input
               type="email"
               placeholder="Enter your email"
-              className="ml-3 w-full outline-none text-sm sm:text-base"
+              className="ml-3 w-full outline-none text-sm sm:text-base placeholder:text-black"
             />
           </div>
         </div>
@@ -178,7 +178,7 @@ const courses = [
             <input
               type="tel"
               placeholder="98XXXXXXXX"
-              className="ml-3 w-full outline-none text-sm sm:text-base"
+              className="ml-3 w-full outline-none text-sm sm:text-base placeholder:text-black"
             />
           </div>
         </div>
@@ -204,7 +204,7 @@ const courses = [
           </div>
 
           <div>
-            <label className="text-sm font-medium text-gray-900">
+            <label className="text-sm font-medium text-black">
               Date of Birth
             </label>
 
@@ -230,7 +230,7 @@ const courses = [
             <textarea
               rows={3}
               placeholder="Enter your address"
-              className="ml-3 w-full outline-none resize-none text-sm sm:text-base"
+              className="ml-3 w-full outline-none resize-none text-sm sm:text-base placeholder:text-black"
             />
           </div>
         </div>
@@ -244,7 +244,7 @@ const courses = [
           <div className="flex items-center border border-gray-100  rounded-xl px-3 sm:px-4 py-3 mt-2">
             <BookOpen className="w-5 h-5 text-gray-900" />
 
-            <select className="ml-3 w-full outline-none bg-transparent text-sm sm:text-base">
+            <select className="ml-3 w-full outline-none bg-transparent text-black text-sm sm:text-base">
               <option>Select a Course</option>
               {courses.map((course) => (
                 <option key={course}>{course}</option>
@@ -259,7 +259,7 @@ const courses = [
             Preferred Batch
           </label>
 
-          <select className="w-full border border-gray-100 rounded-xl px-3 sm:px-4 py-3 mt-2 outline-none text-sm sm:text-base">
+          <select className="w-full border text-black border-gray-100 rounded-xl px-3 sm:px-4 py-3 mt-2 outline-none text-sm sm:text-base">
             <option>Select Batch</option>
             <option>Morning (6:00 AM - 9:00 AM)</option>
             <option>Day (10:00 AM - 2:00 PM)</option>
@@ -278,7 +278,7 @@ const courses = [
             <textarea
               rows={4}
               placeholder="Tell us about yourself..."
-              className="ml-3 w-full outline-none resize-none text-sm sm:text-base"
+              className="ml-3 w-full outline-none resize-none text-sm sm:text-base placeholder:text-black"
             />
           </div>
         </div>
