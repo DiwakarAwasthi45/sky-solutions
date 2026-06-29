@@ -96,7 +96,7 @@ function page() {
                   <User className="w-5 h-5 text-gray-900" />
                   <input
                     type="text"
-                    placeholder="e.g. Diwakar Awasthi"
+                    placeholder="Full Name"
                     className="ml-3 w-full outline-none text-sm sm:text-base"
                   />
                 </div>
@@ -111,7 +111,7 @@ function page() {
                   <Mail className="w-5 h-5 text-gray-900" />
                   <input
                     type="email"
-                    placeholder="e.g. name@gmail.com"
+                    placeholder="Email"
                     className="ml-3 w-full outline-none text-sm sm:text-base"
                   />
                 </div>
